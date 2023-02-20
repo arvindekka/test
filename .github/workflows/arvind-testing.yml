@@ -8,10 +8,12 @@
 name: Arvind testing
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  workflow_dispatch:
+    inputs:
+      app_version:
+        description: 'app_version for the build'
+        required: true
+        default: 'latest
 
 jobs:
   build:
